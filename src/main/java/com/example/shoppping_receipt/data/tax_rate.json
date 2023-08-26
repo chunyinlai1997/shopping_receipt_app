@@ -1,0 +1,12 @@
+[
+  {
+    "name": "CA",
+    "salesTaxRate": 0.0975,
+    "exemptCategories": ["food"]
+  },
+  {
+    "name": "NY",
+    "salesTaxRate": 0.08875,
+    "exemptCategories": ["food", "clothing"]
+  }
+]
