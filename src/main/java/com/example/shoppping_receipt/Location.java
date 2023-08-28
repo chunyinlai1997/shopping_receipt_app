@@ -6,12 +6,12 @@ import org.json.JSONTokener;
 import org.json.JSONObject;
 
 class Location {
-    private String name;
+    //private String name;
     private double salesTaxRate;
     private JSONArray exemptCategories;
 
     public Location(String name, double salesTaxRate, JSONArray exemptCategories) {
-        this.name = name;
+        //this.name = name;
         this.salesTaxRate = salesTaxRate;
         this.exemptCategories = exemptCategories;
     }

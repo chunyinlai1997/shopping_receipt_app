@@ -25,7 +25,7 @@ public class App {
         }
 
         List<Product> products = new ArrayList<>();
-        
+
         while (true) {
             System.out.println("Enter product name (or 'exit' to finish): ");
             String productName = scanner.nextLine();
@@ -33,12 +33,34 @@ public class App {
             if (productName.equalsIgnoreCase("exit")) {
                 break;
             }
-            
-            System.out.println("Enter product price: ");
-            double price = Double.parseDouble(scanner.nextLine());
 
-            System.out.println("Enter product quantity: ");
-            int quantity = Integer.parseInt(scanner.nextLine());
+            // Input validation for product price
+            double price = 0;
+            while (price <= 0) {
+                System.out.println("Enter product price (greater than 0): ");
+                try {
+                    price = Double.parseDouble(scanner.nextLine());
+                    if (price <= 0) {
+                        System.out.println("Please enter a valid price.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Please enter a valid number for price.");
+                }
+            }
+
+            // Input validation for product quantity
+            int quantity = 0;
+            while (quantity <= 0) {
+                System.out.println("Enter product quantity (greater than 0): ");
+                try {
+                    quantity = Integer.parseInt(scanner.nextLine());
+                    if (quantity <= 0) {
+                        System.out.println("Please enter a valid quantity.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Please enter a valid number for quantity.");
+                }
+            }
 
             products.add(new Product(productName, price, quantity));
         }

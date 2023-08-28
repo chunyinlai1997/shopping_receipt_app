@@ -38,6 +38,6 @@ Open the project in your preferred Java IDE or code editor.
 2. Run the App.java file to generate a shopping receipt.
 3. Follow the prompts to choose a shopping location (NY or CA) and input product details (name, price, quantity).
 
-
 ### License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
